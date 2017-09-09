@@ -6,12 +6,16 @@ import org.springframework.beans.factory.annotation {
     autowired
 }
 
-component class MyController() {
+component class MyController(repository, noBeanCandidate) {
 
-    autowired late MyRepository repository;
+    autowired MyRepository repository;
 
-    autowired late NotABean? thisWorks;
+    autowired NotABean? noBeanCandidate;
 
+    shared void check() {
+        print(repository);
+        print(noBeanCandidate);
+    }
 }
 
 repository class MyRepository() {

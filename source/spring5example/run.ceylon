@@ -5,5 +5,5 @@ import org.springframework.context.annotation {
 shared void run() {
     value ctx = AnnotationConfigApplicationContext(`Config`);
 
-    print(ctx.getBean(`MyController`));
+    ctx.getBean(`MyController`).check();
 }
