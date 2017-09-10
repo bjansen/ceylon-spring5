@@ -4,7 +4,7 @@ import org.springframework.context.annotation {
 }
 
 componentScan {
-    basePackages = {"spring5example"};
+    basePackageClasses = {`Config`};
 }
 configuration class Config() {
 }
